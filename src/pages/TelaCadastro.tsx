@@ -68,7 +68,7 @@ const Description = styled.p`
 
 export default function CreateAccount() {
   const router = useRouter();
-  const { imovelNome, kitNome, kitId, kitPreco, kitDescricao } = router.query;
+  //const{ imovelNome, kitNome, kitId, kitPreco, kitDescricao } = router.query;
 
   const [formData, setFormData] = useState({
     name: "",

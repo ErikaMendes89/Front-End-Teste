@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 
@@ -128,7 +128,7 @@ export default function SelecaoImoveis() {
       <SelectionContainer>
       <SelectionBox>
           <Label htmlFor="imovel">Escolha um imóvel</Label>
-          <Select id="imovel" name="imovel" onChange={handleImovelChange} value={selectedImovel}>
+          <Select id="imovel" name="imovel" onChange={handleImovelChange} value={selectedImovel} aria-label="Escolha um imóvel">
             <option value="">Lista dos empreendimentos</option>
             {apartment.map((apto) => (
               <option key={apto.id} value={apto.id}>
@@ -142,7 +142,7 @@ export default function SelecaoImoveis() {
         {selectedImovel && (
           <SelectionBox>
             <Label htmlFor="unidade">Qual unidade você quer decorar?</Label>
-            <Select id="unidade" name="unidade" onChange={(e) => setSelectedUnidade(e.target.value)} value={selectedUnidade}>
+            <Select id="unidade" name="unidade" onChange={(e) => setSelectedUnidade(e.target.value)} value={selectedUnidade} aria-label="Qual unidade você quer decorar?">
               <option value="">Lista das unidades</option>
               {unidades.map((unidade) => (
                 <option key={unidade.id} value={unidade.id}>

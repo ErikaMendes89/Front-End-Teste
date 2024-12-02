@@ -195,7 +195,7 @@ export default function KitSelection() {
 <KitsContainer>
   {kits.map((kit) => (
     <KitCard key={kit.id}>
-      <KitImage $bgImage={kit.kit_image || '/default-image.jpg'} />
+      <KitImage $bgImage={kit.kit_image || 'Carregando...'} />
       <KitTitle>{kit.kit_name}</KitTitle>
       <Price>R$ {kit.valor.toFixed(2)}</Price>
       <Description>{kit.kit_descricao}</Description>
